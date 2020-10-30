@@ -65,7 +65,7 @@ No funciona con el mismo campo el and implícito***
 
 ***Los que tienen qty > 200 y < 80
 Con and implícito pero sin repetir en nombre del campo qty***
-
+~~~
 < db.querysbd.find({qty: {$lt: 200, $gt: 80}}).pretty() 
 {
         "_id" : ObjectId("5f9b6c36da1a8ebf91df4751"),  
