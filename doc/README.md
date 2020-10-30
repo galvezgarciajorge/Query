@@ -2,7 +2,7 @@
 ***Los que tienen qty = 100 y status = "A"
 Hecho con un and implícito***
 
-> db.querysbd.find({ qty:100, status: "A"}).pretty()
+< db.querysbd.find({ qty:100, status: "A"}).pretty()
 {
         "_id" : ObjectId("5f9b6c36da1a8ebf91df4751"),
         "item" : "macbookprob",
@@ -14,11 +14,11 @@ Hecho con un and implícito***
         },
         "status" : "A"
 }
-
+>
 ***Los que tienen qty > 200 y < 80
 No funciona con el mismo campo el and implícito***
 
-> db.querysbd.find({$and: [ {qty: {$lt: 200}}, {qty: {$gt: 80}}]}).pretty()
+< db.querysbd.find({$and: [ {qty: {$lt: 200}}, {qty: {$gt: 80}}]}).pretty()
 {
         "_id" : ObjectId("5f9b6c36da1a8ebf91df4751"),
         "item" : "macbookprob",
@@ -61,12 +61,12 @@ No funciona con el mismo campo el and implícito***
         },
         "status" : "B"
 }
->
+<
 
 ***Los que tienen qty > 200 y < 80
 Con and implícito pero sin repetir en nombre del campo qty***
 
-> db.querysbd.find({qty: {$lt: 200, $gt: 80}}).pretty() 
+< db.querysbd.find({qty: {$lt: 200, $gt: 80}}).pretty() 
 {
         "_id" : ObjectId("5f9b6c36da1a8ebf91df4751"),  
         "item" : "macbookprob",
@@ -109,5 +109,5 @@ Con and implícito pero sin repetir en nombre del campo qty***
         },
         "status" : "B"
 }
->
+<
 
